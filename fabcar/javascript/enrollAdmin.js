@@ -16,6 +16,7 @@ async function main() {
         // load the network configuration
         const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org1.example.com', 'connection-org1.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
+        console.log({ ccp, ccpPath })
 
         // Create a new CA client for interacting with the CA.
         const caInfo = ccp.certificateAuthorities['ca.org1.example.com'];
