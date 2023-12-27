@@ -43,7 +43,7 @@ async function main( queryData ) {
         /// IF QUERY DATA IS AVAILABLE
         if( queryData.key ){
 
-            const queryResult =  await contract.evaluateTransaction('queryCar', `${ queryData.key }`);
+            const queryResult =  await contract.evaluateTransaction('queryCar', `${ queryData.key }`, `${ queryData.color }`);
             console.log(`QUERY Transaction has been evaluated, result is: ${queryResult.toString()}`)
 
             return queryResult
